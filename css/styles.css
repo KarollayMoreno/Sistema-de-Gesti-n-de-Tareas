@@ -1,0 +1,124 @@
+/* styles.css */
+
+/* Variables de colores para facilitar mantenimiento */
+:root {
+    --primary-color: #6fa8dc;
+    --secondary-color: #4d759a;
+    --dark-color: #213242;
+    --light-color: #f0f8ff;
+    --text-color: #2c4358;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  .container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: var(--dark-color);
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  h2 {
+    color: var(--text-color);
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  label {
+    font-size: 14px;
+    color: var(--dark-color);
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  input {
+    padding: 10px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    font-size: 14px;
+    background: var(--light-color);
+    width: 100%;
+  }
+  
+  input:focus {
+    outline: 2px solid var(--secondary-color);
+    background: white;
+  }
+  
+  button {
+    padding: 12px;
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+  }
+  
+  button:hover {
+    background: var(--text-color);
+  }
+  
+  #response-message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--dark-color);
+    font-size: 14px;
+  }
+  
+  /* Diseño adaptable para móviles */
+  @media (max-width: 600px) {
+    .container {
+      padding: 15px;
+      max-width: 90%;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  
+    h2 {
+      font-size: 16px;
+    }
+  
+    input, button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  
