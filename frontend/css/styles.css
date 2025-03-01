@@ -1,0 +1,227 @@
+/* 🎨 Variables de colores más ecológicos */
+:root {
+    --primary-color: #4CAF50; /* Verde esperanza */
+    --secondary-color: #2E7D32; /* Verde bosque */
+    --dark-color: #37474F; /* Gris neutro */
+    --light-color: #F5F5DC; /* Beige ecológico */
+    --text-color: #2C3E50; /* Azul oscuro neutro */
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+}
+
+/* 🌎 Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* 📌 Contenedor principal */
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* ✨ Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🏷️ Estilos de títulos */
+h1 {
+    color: var(--dark-color);
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: var(--text-color);
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* 📋 Formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* 📌 Campos de entrada */
+input {
+    padding: 12px;
+    border: 2px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    background: var(--light-color);
+    width: 100%;
+    transition: border-color var(--transition-speed);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: white;
+}
+
+/* 🎯 Botones */
+button {
+    padding: 12px;
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background var(--transition-speed), transform var(--transition-speed);
+}
+
+button:hover {
+    background: var(--text-color);
+    transform: scale(1.05);
+}
+
+/* 💬 Mensaje de respuesta */
+#response-message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--dark-color);
+    font-size: 14px;
+}
+
+/* 📱 Diseño adaptable */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        max-width: 90%;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    input, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+/* 📋 Estilos específicos para el gestor de tareas */
+.task-container {
+    background: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#task-input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    background: var(--light-color);
+    transition: border-color var(--transition-speed);
+}
+
+#task-input:focus {
+    border-color: var(--primary-color);
+    background: white;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+#task-list li {
+    background: var(--light-color);
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background var(--transition-speed);
+}
+
+#task-list li:hover {
+    background: #e0f2f1;
+}
+
+.task-delete {
+    background: red;
+    color: white;
+    font-size: 14px;
+    padding: 5px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background var(--transition-speed);
+}
+
+.task-delete:hover {
+    background: darkred;
+}
+
+#logout-button {
+    background: #ff4444;
+    margin-top: 15px;
+    width: 100%;
+}
+
+#logout-button:hover {
+    background: #cc0000;
+}
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    padding: 1rem;
+}
+
+.card {
+    max-width: 500px;
+    margin: auto;
+}
+
+#task-list {
+    max-width: 500px;
+    margin: auto;
+}
